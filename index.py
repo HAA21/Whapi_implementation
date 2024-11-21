@@ -46,7 +46,7 @@ def send_whapi_request(endpoint, payload):
     
     return response.json()
 
-@app.route('/hook/messages', methods=['POST'])
+@app.route('/hook', methods=['POST'])
 def handle_new_messages():
     try:
         messages = request.json.get('messages', [])
